@@ -57,6 +57,10 @@ topics:
     web_url: https://github.com/topics/java
     image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/java/java.png
 
+  - name: Spock framework
+    web_url: http://spockframework.org/
+    image_url: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F3%2F36%2FGroovy-logo.svg%2F1200px-Groovy-logo.svg.png
+
   - name: Spring Boot
     web_url: https://github.com/topics/springboot
     image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/spring-boot/spring-boot.png
