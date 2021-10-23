@@ -2,7 +2,8 @@
   <grid>
     <aside>
       <img src="~/assets/6033252.jpeg" alt="@urbontaitis" />
-      <h1>Mindaugas Urbontaitis</h1>
+      <h3>Mindaugas Urbontaitis</h3>
+      
       <ul>
         <li v-for="contact in contacts" :key="contact.url">
           <a :href="contact.url">
@@ -12,7 +13,7 @@
         </li>
       </ul>
     </aside>
-    <section></section>
+    <section>    </section>
   </grid>
 </template>
 
@@ -29,6 +30,17 @@ export default {
     return {
       contacts: [
         {
+          url: '#',
+          icon: ['fas', 'map-marker'],
+          label: 'Vilnius, Lithuania'
+
+        },
+        {
+          url: 'https://www.urbontaitis.lt',
+          icon: ['fas', 'link'],
+          label: 'urbontaitis.lt'
+        },
+        {
           url: 'https://github.com/urbontaitis',
           icon: ['fab', 'github'],
           label: '@urbontaitis',
@@ -39,10 +51,20 @@ export default {
           label: '@murbontaitis',
         },
         {
+          url: 'https://facebook.com/urbontaitis',
+          icon: ['fab', 'facebook'],
+          label: '@urbontaitis',
+        },
+        {
           url: 'https://instagram.com/m.urbo',
           icon: ['fab', 'instagram'],
           label: '@m.urbo',
         },
+        {
+          url: 'https://twitter.com/murbo_',
+          icon: ['fab', 'twitter'],
+          label: '@murbo_',
+        }
       ],
     }
   },
@@ -79,20 +101,19 @@ export default {
 </script>
 
 <style scoped>
-aside {
-  margin-top: 2rem;
-  margin-left: 2rem;
-}
-aside h1 {
-  margin-bottom: 0;
-}
 aside img {
   margin-bottom: 0.25rem;
   max-height: 10rem;
+  border-radius: 50%;
 }
 
 aside p {
   margin-bottom: 3rem;
   line-height: 1.25;
+}
+
+aside ul li {
+  font-size: medium;
+  padding: 0;
 }
 </style>

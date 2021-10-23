@@ -35,7 +35,11 @@ export default {
       imports: [
         {
           set: '@fortawesome/free-brands-svg-icons',
-          icons: ['faGithub', 'faLinkedin', 'faInstagram']
+          icons: ['faGithub', 'faLinkedin', 'faInstagram', 'faTwitter', 'faFacebook']
+        },
+        {
+          set: '@fortawesome/free-solid-svg-icons',
+          icons: ['faMapMarker', 'faLink']
         }
       ]
     }]

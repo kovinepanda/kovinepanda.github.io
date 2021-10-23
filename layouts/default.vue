@@ -23,3 +23,9 @@ export default {
   },
 }
 </script>
+
+<style>
+.grid {
+  margin: 1rem;
+}
+</style>
