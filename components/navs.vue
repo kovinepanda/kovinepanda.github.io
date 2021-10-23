@@ -3,16 +3,13 @@
     <ul>
       <li>
         <nuxt-link :to="`/`" class="contrast">
-          <strong>Mindaugas Urbontaitis</strong>
+          <avatar>MU</avatar>
         </nuxt-link>
       </li>
     </ul>
     <ul>
-      <li><nuxt-link :to="`/blog`">Blog</nuxt-link></li>
+      <li><nuxt-link class="secondary" :to="`/`">Home</nuxt-link></li>
+      <li><nuxt-link class="secondary" :to="`/blog`">Blog</nuxt-link></li>
     </ul>
   </nav>
 </template>
-
-<script>
-export default {}
-</script>

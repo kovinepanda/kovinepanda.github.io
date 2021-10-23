@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link role="button" class="outline" :to="`/tags/${slug}`">
+  <nuxt-link class="contrast outline" :to="`/tags/${slug}`">
     #{{ slug }}
   </nuxt-link>
 </template>
@@ -18,7 +18,6 @@ export default {
 <style scoped>
 a {
   font-size: small;
-  min-width: 0.5rem;
   padding: 0.25rem;
   margin-left: 0.25rem;
 }
