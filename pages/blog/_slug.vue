@@ -2,7 +2,7 @@
   <article>
     <h1>{{ article.title }}</h1>
     <p>{{ article.description }}</p>
-    <my-image :src="article.img" :alt="article.alt" />
+    <article-image-image :src="article.img" :alt="article.alt" />
     <p>Article last updated: {{ article.updatedAt }}</p>
 
     <nuxt-content :document="article" />
@@ -11,12 +11,12 @@
 
 
 <script>
-import MyImage from '@/components/atoms/my-image'
+import ArticleImage from '@/components/atoms/article-image'
 
 export default {
   layout: 'blog',
   components: {
-    MyImage,
+    ArticleImage,
   },
   async asyncData({ $content, params, error }) {
     try {

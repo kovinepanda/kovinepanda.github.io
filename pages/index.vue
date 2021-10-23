@@ -1,17 +1,50 @@
 <template>
-  <div>No content yet</div>
+  <grid>
+    <aside>
+      <img src="~/assets/6033252.jpeg" alt="@urbontaitis" />
+      <h1>Mindaugas Urbontaitis</h1>
+      <ul>
+        <li v-for="contact in contacts" :key="contact.url">
+          <a :href="contact.url">
+            <fa :icon="contact.icon" />
+            {{ contact.label }}
+          </a>
+        </li>
+      </ul>
+    </aside>
+    <section></section>
+  </grid>
 </template>
 
 <script>
 import Card from '@/components/card'
 import Grid from '@/components/grid'
-import MyImage from '@/components/atoms/my-image'
 
 export default {
   components: {
     Card,
     Grid,
-    MyImage,
+  },
+  data() {
+    return {
+      contacts: [
+        {
+          url: 'https://github.com/urbontaitis',
+          icon: ['fab', 'github'],
+          label: '@urbontaitis',
+        },
+        {
+          url: 'https://www.linkedin.com/in/murbontaitis/',
+          icon: ['fab', 'linkedin'],
+          label: '@murbontaitis',
+        },
+        {
+          url: 'https://instagram.com/m.urbo',
+          icon: ['fab', 'instagram'],
+          label: '@m.urbo',
+        },
+      ],
+    }
   },
   async asyncData({ params, error, $content }) {
     try {
@@ -44,3 +77,22 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+aside {
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+aside h1 {
+  margin-bottom: 0;
+}
+aside img {
+  margin-bottom: 0.25rem;
+  max-height: 10rem;
+}
+
+aside p {
+  margin-bottom: 3rem;
+  line-height: 1.25;
+}
+</style>

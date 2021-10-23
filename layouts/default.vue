@@ -1,14 +1,9 @@
 <template>
-  <div>
-    <hero>
-      <navs />
-    </hero>
-    <container>
-      <grid>
-        <Nuxt />
-      </grid>
-    </container>
-  </div>
+  <container fluid>
+    <grid>
+      <Nuxt />
+    </grid>
+  </container>
 </template>
 
 <script>

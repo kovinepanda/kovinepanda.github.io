@@ -13,7 +13,7 @@
       </template>
       <template v-slot:body>
         <figure>
-          <my-image :src="article.img" :alt="article.alt" />
+          <article-image :src="article.img" :alt="article.alt" />
         </figure>
       </template>
       <template v-slot:footer>
@@ -31,13 +31,14 @@
 <script>
 import Card from '@/components/card'
 import Grid from '@/components/grid'
-import MyImage from '@/components/atoms/my-image'
+import ArticleImage from '@/components/atoms/article-image'
 
 export default {
+  layout: 'blog',
   components: {
+    ArticleImage,
     Card,
     Grid,
-    MyImage,
   },
   async asyncData({ params, error, $content }) {
     try {

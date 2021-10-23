@@ -1,9 +1,17 @@
 <template>
-  <main class="container">
+  <main :class="{ container: !fluid, 'container-fluid': fluid }">
     <slot />
   </main>
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    fluid: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
+  },
+}
 </script>
