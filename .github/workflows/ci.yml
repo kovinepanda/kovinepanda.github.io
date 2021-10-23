@@ -4,11 +4,11 @@ on:
   push:
     branches:
       - main
-      - master
+      - nuxt-beta
   pull_request:
     branches:
       - main
-      - master
+      - nuxt-beta
 
 jobs:
   ci:
