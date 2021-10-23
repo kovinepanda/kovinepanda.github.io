@@ -94,9 +94,10 @@ export default {
 </script>
 
 <style scoped>
-aside img {
+aside .picture {
   margin-bottom: 0.25rem;
   max-height: 10rem;
+  max-width: 10rem;
   border-radius: 50%;
 }
 

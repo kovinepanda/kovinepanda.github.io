@@ -19,6 +19,7 @@
     "nuxt": "2.15.7"
   },
   "devDependencies": {
+    "@bazzite/nuxt-optimized-images": "^0.4.0",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-regular-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
@@ -26,9 +27,12 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "27.0.5",
     "eslint-config-prettier": "8.3.0",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.2",
     "jest": "27.0.5",
     "nuxt-fontawesome": "^0.4.0",
     "prettier": "2.3.2",
-    "vue-jest": "3.0.4"
+    "vue-jest": "3.0.4",
+    "webp-loader": "^0.6.0"
   }
 }
