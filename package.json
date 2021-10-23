@@ -7,7 +7,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "test": "jest",
+    "test": "echo \"No tests are available. Enable by using 'jest'\"",
     "lint": "echo \"Not yet implemented\""
   },
   "dependencies": {
