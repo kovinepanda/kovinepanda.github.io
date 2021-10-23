@@ -17,14 +17,16 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    "@picocss/pico/css/pico.min.css"
+  css: [    
+    "@picocss/pico/css/pico.min.css",
+    "~/assets/global.css"
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/vue-lazysizes.client.js',
-    '~/plugins/components.js'
+    '~/plugins/date-formatter.js',
+    '~/plugins/components.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

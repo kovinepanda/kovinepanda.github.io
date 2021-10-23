@@ -4,25 +4,21 @@
       <template v-slot:header>
         <hgroup>
           <h1>
-            {{ article.title }}
+            <nuxt-link :to="article.dir">{{ article.title }}</nuxt-link>
           </h1>
           <h2>
             {{ article.description }}
-          </h2>
+          </h2>        
         </hgroup>
+        <p>Posted {{ article.updatedAt | formatDate }}</p>
       </template>
       <template v-slot:body>
-        <figure>
-          <article-image :src="article.img" :alt="article.alt" />
-        </figure>
+        <nuxt-link :to="article.dir">
+          <lazy-image :src="article.img" :alt="article.alt" />
+        </nuxt-link>
       </template>
       <template v-slot:footer>
-        <p>
-          <span v-for="tag in article.tags" :key="tag" class="tag">
-            <nuxt-link :to="`/tags/${tag}`">{{ tag }}</nuxt-link>
-          </span>
-        </p>
-        <nuxt-link :to="article.dir">Read more</nuxt-link>
+        <tag v-for="tag in article.tags" :slug="tag" :key="tag" />
       </template>
     </card>
   </grid>

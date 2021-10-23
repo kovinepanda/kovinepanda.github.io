@@ -1,14 +1,20 @@
 <template>
-  <article>
-    <h1>{{ article.title }}</h1>
-    <p>{{ article.description }}</p>
-    <article-image :src="article.img" :alt="article.alt" />
-    <p>Article last updated: {{ article.updatedAt }}</p>
-
-    <nuxt-content :document="article" />
-  </article>
+    <card>
+      <template v-slot:header>
+        <hgroup>
+          <h1>{{ article.title }}</h1>
+          <p>Posted {{ article.updatedAt | formatDate }}.</p>      
+        </hgroup>
+      </template>
+      <template v-slot:body>        
+        <lazy-image :src="article.img" :alt="article.alt" />        
+        <nuxt-content :document="article" />
+      </template>  
+      <template v-slot:footer>
+        <tag v-for="tag in article.tags" :slug="tag" :key="tag" />
+      </template>
+    </card>
 </template>
-
 
 <script>
 export default {

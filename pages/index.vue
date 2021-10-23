@@ -3,62 +3,47 @@
     <aside>
       <lazy-image src="/assets/6033252.jpeg" alt="@urbontaitis" />
       <h3>Mindaugas Urbontaitis</h3>
-      
+
+      <ul>
+        <li v-for="loc in locations" :key="loc.url">
+          <a :href="loc.url">
+            <fa :icon="loc.icon" />
+            {{ loc.label }}
+          </a>
+        </li>
+      </ul>
       <ul>
         <li v-for="contact in contacts" :key="contact.url">
-          <a :href="contact.url">
+          <a :href="contact.url" target="_blank">
             <fa :icon="contact.icon" />
             {{ contact.label }}
           </a>
         </li>
       </ul>
     </aside>
-    <section>    </section>
+    <section></section>
   </grid>
 </template>
 
 <script>
+import { CONTACTS } from '@/data/contacts.js'
+
 export default {
   data() {
     return {
-      contacts: [
+      locations: [
         {
           url: '#',
           icon: ['fas', 'map-marker'],
-          label: 'Vilnius, Lithuania'
-
+          label: 'Vilnius, Lithuania',
         },
         {
           url: 'https://www.urbontaitis.lt',
           icon: ['fas', 'link'],
-          label: 'urbontaitis.lt'
+          label: 'urbontaitis.lt',
         },
-        {
-          url: 'https://github.com/urbontaitis',
-          icon: ['fab', 'github'],
-          label: '@urbontaitis',
-        },
-        {
-          url: 'https://www.linkedin.com/in/murbontaitis/',
-          icon: ['fab', 'linkedin'],
-          label: '@murbontaitis',
-        },
-        {
-          url: 'https://facebook.com/urbontaitis',
-          icon: ['fab', 'facebook'],
-          label: '@urbontaitis',
-        },
-        {
-          url: 'https://instagram.com/m.urbo',
-          icon: ['fab', 'instagram'],
-          label: '@m.urbo',
-        },
-        {
-          url: 'https://twitter.com/murbo_',
-          icon: ['fab', 'twitter'],
-          label: '@murbo_',
-        }
       ],
+      contacts: CONTACTS
     }
   },
   async asyncData({ params, error, $content }) {

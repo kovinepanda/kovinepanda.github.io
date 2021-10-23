@@ -2,6 +2,8 @@ import Vue from "vue";
 
 import ArticleImage from '@/components/atoms/article-image';
 import LazyImage from "@/components/atoms/lazy-image";
+import Tag from '@/components/atoms/tag';
+
 import Card from "@/components/card";
 import Container from '@/components/container'
 import Grid from "@/components/grid";
@@ -10,6 +12,7 @@ import Sidebar from "@/components/sidebar";
 
 Vue.component("lazy-image", LazyImage);
 Vue.component("article-image", ArticleImage)
+Vue.component("tag", Tag)
 Vue.component("card", Card);
 Vue.component("container", Container);
 Vue.component("grid", Grid);
