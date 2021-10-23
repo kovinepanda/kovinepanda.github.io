@@ -29,17 +29,8 @@
 </template>
 
 <script>
-import Card from '@/components/card'
-import Grid from '@/components/grid'
-import ArticleImage from '@/components/atoms/article-image'
-
 export default {
   layout: 'blog',
-  components: {
-    ArticleImage,
-    Card,
-    Grid,
-  },
   async asyncData({ params, error, $content }) {
     try {
       const articles = await $content('blog', { deep: true }).fetch()

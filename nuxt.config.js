@@ -23,6 +23,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugins/vue-lazysizes.client.js',
+    '~/plugins/components.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -65,5 +67,8 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    extend (config, { isDev, isClient, loaders: { vue } }) {
+      vue.transformAssetUrls.LazyImage = ["src"]; 
+    }
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <grid>
     <aside>
-      <img src="~/assets/6033252.jpeg" alt="@urbontaitis" />
+      <lazy-image src="/assets/6033252.jpeg" alt="@urbontaitis" />
       <h3>Mindaugas Urbontaitis</h3>
       
       <ul>
@@ -18,14 +18,7 @@
 </template>
 
 <script>
-import Card from '@/components/card'
-import Grid from '@/components/grid'
-
 export default {
-  components: {
-    Card,
-    Grid,
-  },
   data() {
     return {
       contacts: [

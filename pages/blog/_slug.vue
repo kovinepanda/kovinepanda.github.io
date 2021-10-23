@@ -2,7 +2,7 @@
   <article>
     <h1>{{ article.title }}</h1>
     <p>{{ article.description }}</p>
-    <article-image-image :src="article.img" :alt="article.alt" />
+    <article-image :src="article.img" :alt="article.alt" />
     <p>Article last updated: {{ article.updatedAt }}</p>
 
     <nuxt-content :document="article" />
@@ -11,13 +11,8 @@
 
 
 <script>
-import ArticleImage from '@/components/atoms/article-image'
-
 export default {
   layout: 'blog',
-  components: {
-    ArticleImage,
-  },
   async asyncData({ $content, params, error }) {
     try {
       const articlePath = `/blog/${params.slug}`
