@@ -1,6 +1,6 @@
 export const AUTHOR = {
     name: 'Mindaugas Urbontaitis',
-    bio: 'Developer',
+    bio: 'Software Engineer',
     image: '/assets/6033252.jpeg'
 }
 

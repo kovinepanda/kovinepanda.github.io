@@ -2,7 +2,10 @@
   <grid>
     <aside>
       <lazy-image :src="author.image" :alt="author.name" />
-      <h3>{{ author.name }}</h3>
+      <hgroup>
+        <h3>{{ author.name }}</h3>
+        <small>{{ author.bio }}</small>
+      </hgroup>
 
       <ul>
         <li v-for="loc in locations" :key="loc.url">
@@ -44,7 +47,7 @@ export default {
           label: 'urbontaitis.lt',
         },
       ],
-      contacts: CONTACTS
+      contacts: CONTACTS,
     }
   },
   async asyncData({ params, error, $content }) {
@@ -82,8 +85,8 @@ export default {
 <style scoped>
 aside .picture {
   margin-bottom: 0.25rem;
-  max-height: 10rem;
-  max-width: 10rem;
+  max-height: 8rem;
+  max-width: 8rem;
   border-radius: 50%;
 }
 
