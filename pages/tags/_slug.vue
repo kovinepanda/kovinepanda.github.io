@@ -17,6 +17,7 @@ export default {
     try {
       const articles = await $content('blog')
         .where({ tags: { $contains: params.slug } })
+        .sortBy('createdAt', 'asc')
         .fetch()
       return { articles }
     } catch (err) {

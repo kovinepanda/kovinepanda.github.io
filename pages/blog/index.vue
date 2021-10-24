@@ -16,7 +16,7 @@ export default {
   layout: 'blog',
   async asyncData({ params, error, $content }) {
     try {
-      const articles = await $content('blog').fetch()
+      const articles = await $content('blog').sortBy('createdAt', 'asc').fetch()
       return { articles }
     } catch (err) {
       error({

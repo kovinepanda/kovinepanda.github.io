@@ -6,6 +6,7 @@
     </hgroup>
     <small>Posted {{ article.updatedAt | formatDate }}.</small>
     <lazy-image :src="article.img" :alt="article.alt" />
+    <table-of-content :content="article.toc" />
     <nuxt-content :document="article" />
     <hr />
     <tag v-for="tag in article.tags" :slug="tag" :key="tag" />
@@ -17,10 +18,12 @@
 
 <script>
 import prevNextArticle from '~/components/prev-next-article.vue'
+import TableOfContent from '~/components/table-of-content.vue'
+import { AUTHOR } from '~/data/contacts'
 // import { AUTHOR } from '@/data/contacts'
 
 export default {
-  components: { prevNextArticle },
+  components: { prevNextArticle, TableOfContent },
   layout: 'blog',
   async asyncData({ $content, params, error }) {
     try {
@@ -30,7 +33,7 @@ export default {
         .only(['title', 'slug'])
         .sortBy('createdAt', 'asc')
         .surround(params.slug)
-        .fetch()      
+        .fetch()
       return { article, prev, next }
     } catch (err) {
       error({
@@ -53,11 +56,30 @@ export default {
           name: 'description',
           content: this.article.description,
         },
+        {
+          property: 'article:published_time',
+          content: this.article.createdAt,
+        },
+        {
+          property: 'article:modified_time',
+          content: this.article.updatedAt,
+        },
+        {
+          property: 'article:tag',
+          content: this.article.tags ? this.article.tags.toString() : '',
+        },
+        { name: 'twitter:label1', content: 'Written by' },
+        { name: 'twitter:data1', content: AUTHOR.name },
+        { name: 'twitter:label2', content: 'Filed under' },
+        {
+          name: 'twitter:data2',
+          content: this.article.tags ? this.article.tags.toString() : '',
+        },
       ],
       link: [
         {
           rel: 'canonical',
-          href: 'https://www.urbontaitis.lt' + this.article.dir,
+          href: 'https://www.urbontaitis.lt/blog/' + this.article.slug,
         },
       ],
     }

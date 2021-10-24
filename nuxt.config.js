@@ -7,12 +7,64 @@ export default {
     title: 'Mindaugas Urbontaitis',
     meta: [
       { charset: 'utf-8' },
+      { name: "HandheldFriendly", content: "True" },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { hid: 'description', name: 'description', content: 'Mindaugas Urbontaitis personal blog' },
+      { name: 'format-detection', content: 'telephone=no' },
+      { property: "og:site_name", content: "Mindaugas Urbontaitis" },
+      { hid: "og:type", property: "og:type", content: "website" },
+      {
+        hid: "og:url",
+        property: "og:url",
+        content: "https://www.urbontaitis.lt",
+      },
+      {
+        hid: "og:title",
+        property: "og:title",
+        content: "Mindaugas Urbontaitis personal blog",
+      },
+      {
+        hid: "og:description",
+        property: "og:description",
+        content: "Articles focused on the traveling, cycling and coding.",
+      },
+      {
+        hid: "og:image",
+        property: "og:image",
+        content: "/assets/blog/TV_bokstas.jpg",
+      },
+      { property: "og:image:width", content: "740" },
+      { property: "og:image:height", content: "300" },
+      { name: "twitter:site", content: "@murbo_" },
+      { name: "twitter:card", content: "summary_large_image" },
+      {
+        hid: "twitter:url",
+        name: "twitter:url",
+        content: "https://www.urbontaitis.lt",
+      },
+      {
+        hid: "twitter:title",
+        name: "twitter:title",
+        content: "Mindaugas Urbontaitis personal blog",
+      },
+      {
+        hid: "twitter:description",
+        name: "twitter:description",
+        content: "Articles focused on the traveling, cycling and coding.",
+      },
+      {
+        hid: "twitter:image",
+        name: "twitter:image",
+        content: "/assets/blog/TV_bokstas.jpg",
+      },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        hid: "canonical",
+        rel: "canonical",
+        href: "https://www.urbontaitis.lt",
+      },
     ]
   },
 

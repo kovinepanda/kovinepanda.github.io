@@ -15,6 +15,7 @@ import PrevNextArticle from '@/components/prev-next-article';
 import ContactList from '@/components/contact-list';
 import CustomFooter from '@/components/custom-footer';
 import BlogItem from '@/components/blog-item';
+import TableOfContent from '@/components/table-of-content';
 
 Vue.component("article-image", ArticleImage);
 Vue.component("author", Author);
@@ -30,3 +31,4 @@ Vue.component("prev-next-article", PrevNextArticle);
 Vue.component("contact-list", ContactList);
 Vue.component("custom-footer", CustomFooter);
 Vue.component("blog-item", BlogItem);
+Vue.component("table-of-content", TableOfContent);
