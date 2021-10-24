@@ -2,7 +2,7 @@
   <nav class="container-fluid">
     <ul>
       <li>
-        <nuxt-link :to="`/`" class="contrast">
+        <nuxt-link v-if="!homepage" :to="`/`" class="contrast">
           <avatar>MU</avatar>
         </nuxt-link>
       </li>
@@ -13,3 +13,14 @@
     </ul>
   </nav>
 </template>
+
+<script>
+export default {
+  props: {
+    homepage: {
+      type: Boolean,
+      default: false
+    }
+  }
+}
+</script>

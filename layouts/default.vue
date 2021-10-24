@@ -1,17 +1,22 @@
 <template>
-  <container fluid>
+  <div>
+    <hero>
+      <navs homepage />
+    </hero>
+    <container fluid>
     <grid>
       <Nuxt />
     </grid>
   </container>
+  </div>  
 </template>
 
 <script>
 export default {}
 </script>
 
-<style>
+<style scoped>
 .grid {
-  margin: 1rem;
+  margin-left: 1rem;
 }
 </style>
