@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar renders correctly 1`] = `
+<div
+  class="avatar-circle"
+>
+  <span
+    class="initials"
+  />
+</div>
+`;

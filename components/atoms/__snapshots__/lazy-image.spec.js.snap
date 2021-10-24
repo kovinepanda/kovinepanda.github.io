@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LazyImage renders correctly 1`] = `
+<figure
+  class="picture"
+>
+  <picture>
+    <source
+      data-srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=?webp"
+      type="image/webp"
+    />
+     
+    <source
+      data-srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs="
+      type="image/png"
+    />
+     
+    <img
+      alt="black pixel"
+      class="lazyload"
+      data-src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs="
+      src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII="
+    />
+  </picture>
+</figure>
+`;
