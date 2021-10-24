@@ -1,11 +1,11 @@
 import Vue from "vue";
 
 import ArticleImage from '@/components/atoms/article-image';
-import Author from '@/components/atoms/author';
 import Avatar from '@/components/atoms/avatar';
 import LazyImage from "@/components/atoms/lazy-image";
 import Tag from '@/components/atoms/tag';
 
+import Author from '@/components/author';
 import Card from "@/components/card";
 import Container from '@/components/container'
 import Grid from "@/components/grid";

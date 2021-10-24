@@ -7,33 +7,35 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "test": "echo \"No tests are available. Enable by using 'jest'\"",
+    "test": "jest",
     "lint": "echo \"Not yet implemented\""
   },
   "dependencies": {
     "@nuxt/content": "1.14.0",
     "@nuxtjs/pwa": "3.3.5",
-    "@picocss/pico": "^1.3.3",
+    "@picocss/pico": "1.3.3",
     "core-js": "3.15.1",
     "lazysizes": "5.3.2",
     "nuxt": "2.15.7"
   },
   "devDependencies": {
-    "@bazzite/nuxt-optimized-images": "^0.4.0",
-    "@fortawesome/free-brands-svg-icons": "^5.15.4",
-    "@fortawesome/free-regular-svg-icons": "^5.15.4",
-    "@fortawesome/free-solid-svg-icons": "^5.15.4",
-    "@nuxtjs/sitemap": "^2.4.0",
+    "@bazzite/nuxt-optimized-images": "0.4.0",
+    "@fortawesome/free-brands-svg-icons": "5.15.4",
+    "@fortawesome/free-regular-svg-icons": "5.15.4",
+    "@fortawesome/free-solid-svg-icons": "5.15.4",
+    "@nuxt/test-utils": "0.2.2",
+    "@nuxtjs/sitemap": "2.4.0",
     "@vue/test-utils": "1.2.1",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "27.0.5",
     "eslint-config-prettier": "8.3.0",
-    "imagemin-mozjpeg": "^9.0.0",
-    "imagemin-pngquant": "^9.0.2",
+    "imagemin-mozjpeg": "9.0.0",
+    "imagemin-pngquant": "9.0.2",
     "jest": "27.0.5",
-    "nuxt-fontawesome": "^0.4.0",
+    "jest-serializer-vue": "2.0.2",
+    "nuxt-fontawesome": "0.4.0",
     "prettier": "2.3.2",
     "vue-jest": "3.0.4",
-    "webp-loader": "^0.6.0"
+    "webp-loader": "0.6.0"
   }
 }
