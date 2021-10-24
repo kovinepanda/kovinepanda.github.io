@@ -17,13 +17,10 @@
 </template>
 
 <script>
-import prevNextArticle from '~/components/prev-next-article.vue'
-import TableOfContent from '~/components/table-of-content.vue'
 import { AUTHOR } from '~/data/contacts'
-// import { AUTHOR } from '@/data/contacts'
+import getSiteMeta from '@/utils/get-site-meta'
 
 export default {
-  components: { prevNextArticle, TableOfContent },
   layout: 'blog',
   async asyncData({ $content, params, error }) {
     try {
@@ -42,20 +39,26 @@ export default {
       })
     }
   },
-  // computed: {
-  //   author() {
-  //     return this.article?.author || AUTHOR
-  //   },
-  // },
+  computed: {
+    author() {
+      return this.article?.author || AUTHOR
+    },
+    meta() {
+      const metaData = {
+        type: 'article',
+        title: this.article.title,
+        description: this.article.description,
+        url: `https://www.urbontaitis.lt/blog/${this.$route.params.slug}`,
+        mainImage: this.article.img,
+      }
+      return getSiteMeta(metaData)
+    },
+  },
   head() {
     return {
       title: this.article.title,
       meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: this.article.description,
-        },
+        ...this.meta,
         {
           property: 'article:published_time',
           content: this.article.createdAt,
@@ -69,8 +72,8 @@ export default {
           content: this.article.tags ? this.article.tags.toString() : '',
         },
         { name: 'twitter:label1', content: 'Written by' },
-        { name: 'twitter:data1', content: AUTHOR.name },
-        { name: 'twitter:label2', content: 'Filed under' },
+        { name: 'twitter:data1', content: this.author.name },
+        // { name: 'twitter:label2', content: 'Filed under' },
         {
           name: 'twitter:data2',
           content: this.article.tags ? this.article.tags.toString() : '',
