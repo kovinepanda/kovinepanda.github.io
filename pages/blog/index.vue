@@ -1,18 +1,14 @@
 <template>
-  <grid>
-    <section v-for="article in articles" :key="article.path">
-      <nuxt-link :to="article.path">
-        <lazy-image :src="article.img" :alt="article.alt" />
-      </nuxt-link>
-      <p>
-        <nuxt-link :to="article.path">{{ article.title }}</nuxt-link>
-        <br />
-        <small>{{ article.description }}</small>
-        <br />
-        <small>{{ article.updatedAt | formatDate }}</small>
-      </p>
-    </section>
-  </grid>
+  <div>
+    <h1>Blog</h1>
+    <grid>
+      <blog-item
+        v-for="article in articles"
+        :article="article"
+        :key="article.path"
+      />
+    </grid>
+  </div>
 </template>
 
 <script>
@@ -49,10 +45,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-.tag {
-  margin-right: 0.5rem;
-  font-size: small;
-}
-</style>

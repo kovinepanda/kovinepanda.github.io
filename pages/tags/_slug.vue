@@ -1,17 +1,13 @@
 <template>
-  <div class="posts">
+  <div>
     <h1>Tags: {{ $route.params.slug }}</h1>
-    <div v-for="article in articles" :key="article.dir">
-      <h3 class="heading">{{ article.title }}</h3>
-      <p>{{ article.description }}</p>
-      <p class="tags">
-        <span v-for="tag in article.tags" :key="tag" class="tag">
-          <nuxt-link :to="`/tags/${tag}`">{{ tag }}</nuxt-link>
-          &nbsp;
-        </span>
-      </p>
-      <nuxt-link :to="article.dir">Read more</nuxt-link>
-    </div>
+    <grid>
+      <blog-item
+        v-for="article in articles"
+        :article="article"
+        :key="article.path"
+      />
+    </grid>
   </div>
 </template>
 <script>
@@ -19,7 +15,7 @@ export default {
   layout: 'blog',
   async asyncData({ params, error, $content }) {
     try {
-      const articles = await $content('blog', { deep: true })
+      const articles = await $content('blog')
         .where({ tags: { $contains: params.slug } })
         .fetch()
       return { articles }
@@ -50,3 +46,10 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+/* article {
+  display: flex;
+  justify-content:space-evenly;
+} */
+</style>

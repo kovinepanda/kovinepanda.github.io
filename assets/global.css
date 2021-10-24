@@ -1,3 +1,7 @@
+:root {
+  --spacing: 0.5rem;
+}
+
 /* Deep-purple Light scheme (Default) */
 /* Can be forced with data-theme="light" */
 [data-theme="light"],

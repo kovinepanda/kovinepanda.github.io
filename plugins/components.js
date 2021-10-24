@@ -12,6 +12,9 @@ import Grid from "@/components/grid";
 import Navs from "@/components/navs";
 import Sidebar from "@/components/sidebar";
 import PrevNextArticle from '@/components/prev-next-article';
+import ContactList from '@/components/contact-list';
+import CustomFooter from '@/components/custom-footer';
+import BlogItem from '@/components/blog-item';
 
 Vue.component("article-image", ArticleImage);
 Vue.component("author", Author);
@@ -24,3 +27,6 @@ Vue.component("grid", Grid);
 Vue.component("navs", Navs);
 Vue.component("sidebar", Sidebar);
 Vue.component("prev-next-article", PrevNextArticle);
+Vue.component("contact-list", ContactList);
+Vue.component("custom-footer", CustomFooter);
+Vue.component("blog-item", BlogItem);
