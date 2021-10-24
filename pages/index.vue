@@ -1,8 +1,8 @@
 <template>
   <grid>
     <aside>
-      <lazy-image src="/assets/6033252.jpeg" alt="@urbontaitis" />
-      <h3>Mindaugas Urbontaitis</h3>
+      <lazy-image :src="author.image" :alt="author.name" />
+      <h3>{{ author.name }}</h3>
 
       <ul>
         <li v-for="loc in locations" :key="loc.url">
@@ -26,11 +26,12 @@
 </template>
 
 <script>
-import { CONTACTS } from '@/data/contacts.js'
+import { AUTHOR, CONTACTS } from '@/data/contacts.js'
 
 export default {
   data() {
     return {
+      author: AUTHOR,
       locations: [
         {
           url: '#',

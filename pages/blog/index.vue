@@ -1,26 +1,17 @@
 <template>
   <grid>
-    <card v-for="article in articles" :key="article.dir">
-      <template v-slot:header>
-        <hgroup>
-          <h1>
-            <nuxt-link :to="article.dir">{{ article.title }}</nuxt-link>
-          </h1>
-          <h2>
-            {{ article.description }}
-          </h2>        
-        </hgroup>
-        <p>Posted {{ article.updatedAt | formatDate }}</p>
-      </template>
-      <template v-slot:body>
-        <nuxt-link :to="article.dir">
-          <lazy-image :src="article.img" :alt="article.alt" />
-        </nuxt-link>
-      </template>
-      <template v-slot:footer>
-        <tag v-for="tag in article.tags" :slug="tag" :key="tag" />
-      </template>
-    </card>
+    <section v-for="article in articles" :key="article.path">
+      <nuxt-link :to="article.path">
+        <lazy-image :src="article.img" :alt="article.alt" />
+      </nuxt-link>
+      <p>
+        <nuxt-link :to="article.path">{{ article.title }}</nuxt-link>
+        <br />
+        <small>{{ article.description }}</small>
+        <br />
+        <small>{{ article.updatedAt | formatDate }}</small>
+      </p>
+    </section>
   </grid>
 </template>
 
@@ -29,7 +20,7 @@ export default {
   layout: 'blog',
   async asyncData({ params, error, $content }) {
     try {
-      const articles = await $content('blog', { deep: true }).fetch()
+      const articles = await $content('blog').fetch()
       return { articles }
     } catch (err) {
       error({

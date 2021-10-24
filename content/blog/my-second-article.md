@@ -1,16 +1,14 @@
 ---
-title: My first Blog Post
+title: My second Blog Post
 description: Learning how to use @nuxt/content to create a blog
-img: /assets/blog/TV_bokstas.jpg
-alt: my first blog post
+img: /assets/blog/second-blog-post.jpg
+alt: my second blog post
 tags:
     - test
-    - test-v2
+    - test-v3
 ---
 
-# My first blog post
-
-Welcome to my first blog post using content module. 
+Welcome to my second blog post using content module.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac auctor augue mauris augue neque gravida in. Eget nullam non nisi est sit amet facilisis magna etiam. Praesent semper feugiat nibh sed pulvinar proin gravida. Metus aliquam eleifend mi in. Parturient montes nascetur ridiculus mus mauris vitae ultricies. Sollicitudin tempor id eu nisl nunc mi ipsum faucibus. Sit amet purus gravida quis blandit. In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Risus sed vulputate odio ut enim blandit volutpat. Elementum integer enim neque volutpat ac tincidunt. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. Turpis egestas pretium aenean pharetra magna ac placerat vestibulum lectus. In ante metus dictum at tempor. Turpis cursus in hac habitasse. Feugiat vivamus at augue eget. Massa id neque aliquam vestibulum morbi.
 

@@ -1,3 +1,9 @@
+export const AUTHOR = {
+    name: 'Mindaugas Urbontaitis',
+    bio: 'Developer',
+    image: '/assets/6033252.jpeg'
+}
+
 export const CONTACTS = [
     {
         url: 'https://github.com/urbontaitis',
