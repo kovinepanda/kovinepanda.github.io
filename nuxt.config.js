@@ -1,3 +1,5 @@
+import getRoutes from "./utils/get-routes";
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -68,8 +70,15 @@ export default {
     ]
   },
 
+  sitemap: {
+    hostname: 'https://www.urbontaitis.lt',
+    routes() {
+      return getRoutes();
+    },
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [    
+  css: [
     "@picocss/pico/css/pico.min.css",
     "~/assets/global.css"
   ],
@@ -108,6 +117,7 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     '@bazzite/nuxt-optimized-images',
+    '@nuxtjs/sitemap'
   ],
 
   optimizedImages: {
@@ -141,8 +151,8 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    extend (config, { isDev, isClient, loaders: { vue } }) {
-      vue.transformAssetUrls.LazyImage = ["src"]; 
+    extend(config, { isDev, isClient, loaders: { vue } }) {
+      vue.transformAssetUrls.LazyImage = ["src"];
     }
   }
 }
